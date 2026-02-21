@@ -1,0 +1,27 @@
+/* --- 1. Design Tokens (Variablen) --- */
+:root {
+  // Colors
+  --primary-color: #0f172a;
+  --sidebar-bg: #1e293b;
+  --bg-color: #f1f5f9;
+  --text-main: #333333;
+  --text-light: #ffffff;
+
+  // (Spacing)
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  height: 100vh; /* Nimmt immer die volle Bildschirmhöhe ein */
+}
