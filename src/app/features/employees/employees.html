@@ -1,6 +1,13 @@
 <div class="employees-container">
   <h2>Mitarbeiter-Verzeichnis</h2>
-
+  <div class="search-bar">
+    <input
+      type="text"
+      #searchInput
+      placeholder="Mitarbeiter suchen..."
+      (input)="searchTerm.set(searchInput.value)"
+    />
+  </div>
   <table class="enterprise-table">
     <thead>
       <tr>
@@ -13,7 +20,7 @@
     </thead>
 
     <tbody>
-      @for (employee of employeeService.employeeList(); track employee.id) {
+      @for (employee of filteredEmployees(); track employee.id) {
         <tr>
           <td>{{ employee.id }}</td>
 
