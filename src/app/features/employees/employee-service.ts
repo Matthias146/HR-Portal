@@ -35,4 +35,14 @@ export class EmployeeService {
   presentCount = computed(() => this.employeeList().filter((e) => e.status === 'PRESENT').length);
   sickCount = computed(() => this.employeeList().filter((e) => e.status === 'SICK').length);
   vacationCount = computed(() => this.employeeList().filter((e) => e.status === 'VACATION').length);
+
+  addEmployee(newEmployeeData: Omit<Employee, 'id'>) {
+    const newId = Math.floor(Math.random() * 10000);
+
+    const employeeToSave: Employee = {
+      ...newEmployeeData,
+      id: newId,
+    };
+    this.employeeList.update((currentList) => [...currentList, employeeToSave]);
+  }
 }

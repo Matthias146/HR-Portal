@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { Employee } from './employee.model';
 import { StatusBadge } from '../../shared/status-badge/status-badge';
 import { EmployeeService } from './employee-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-employees',
-  imports: [StatusBadge],
+  imports: [StatusBadge, RouterLink],
   templateUrl: './employees.html',
   styleUrl: './employees.scss',
 })
