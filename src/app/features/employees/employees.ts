@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Employee } from './employee.model';
+import { StatusBadge } from '../../shared/status-badge/status-badge';
 
 @Component({
   selector: 'app-employees',
-  imports: [],
+  imports: [StatusBadge],
   templateUrl: './employees.html',
   styleUrl: './employees.scss',
 })

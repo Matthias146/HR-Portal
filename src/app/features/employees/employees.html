@@ -21,7 +21,7 @@
 
           <td>{{ employee.department }}</td>
           <td>{{ employee.role }}</td>
-          <td>{{ employee.status }}</td>
+          <td><app-status-badge [status]="employee.status" /></td>
         </tr>
       } @empty {
         <tr>
