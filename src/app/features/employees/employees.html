@@ -1,1 +1,33 @@
-<p>employees works!</p>
+<div class="employees-container">
+  <h2>Mitarbeiter-Verzeichnis</h2>
+
+  <table class="enterprise-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Abteilung</th>
+        <th>Rolle</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (employee of employeeList(); track employee.id) {
+        <tr>
+          <td>{{ employee.id }}</td>
+
+          <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.role }}</td>
+          <td>{{ employee.status }}</td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5">Keine Mitarbeiter gefunden.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
