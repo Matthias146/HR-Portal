@@ -6,9 +6,16 @@
   margin: var(--spacing-lg);
   max-width: 600px;
 
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
   h2 {
     color: var(--primary-color);
-    margin-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-md);
   }
 }
 
@@ -44,5 +51,21 @@
       border-color: #3b82f6;
       box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
     }
+  }
+
+  .input-error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    }
+  }
+
+  .error-message {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    font-weight: 500;
   }
 }

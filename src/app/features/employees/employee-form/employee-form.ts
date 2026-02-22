@@ -6,7 +6,7 @@ import { EmployeeService } from '../employee-service';
 
 @Component({
   selector: 'app-employee-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './employee-form.html',
   styleUrl: './employee-form.scss',
 })
@@ -15,8 +15,8 @@ export class EmployeeForm {
   router = inject(Router);
 
   employeeForm = new FormGroup({
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
+    firstName: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
     department: new FormControl(''),
     role: new FormControl('USER', [Validators.required]),
     status: new FormControl('PRESENT', [Validators.required]),
