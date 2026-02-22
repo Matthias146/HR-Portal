@@ -7,17 +7,17 @@
   <section class="kpi-grid">
     <article class="kpi-card success">
       <h3>Anwesend im Büro</h3>
-      <p class="kpi-value">42</p>
+      <p class="kpi-value">{{ presentEmployees() }}</p>
     </article>
 
     <article class="kpi-card warning">
       <h3>Krank gemeldet</h3>
-      <p class="kpi-value">3</p>
+      <p class="kpi-value">{{ sickEmployees() }}</p>
     </article>
 
     <article class="kpi-card info">
       <h3>Im Urlaub</h3>
-      <p class="kpi-value">5</p>
+      <p class="kpi-value">{{ onVacation() }}</p>
     </article>
   </section>
 </div>
