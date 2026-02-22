@@ -13,7 +13,7 @@
     </thead>
 
     <tbody>
-      @for (employee of employeeList(); track employee.id) {
+      @for (employee of employeeService.employeeList(); track employee.id) {
         <tr>
           <td>{{ employee.id }}</td>
 

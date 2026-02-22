@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { EmployeeService } from '../employees/employee-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './dashboard.scss',
 })
 export class Dashboard {
-  presentEmployees = signal(42);
-  sickEmployees = signal(3);
-  onVacation = signal(5);
+  employeeService = inject(EmployeeService);
 }
