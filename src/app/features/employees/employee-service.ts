@@ -45,4 +45,8 @@ export class EmployeeService {
     };
     this.employeeList.update((currentList) => [...currentList, employeeToSave]);
   }
+
+  deleteEmployee(id: number) {
+    this.employeeList.update((currentList) => currentList.filter((employee) => employee.id !== id));
+  }
 }

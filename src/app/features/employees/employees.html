@@ -19,6 +19,7 @@
         <th>Abteilung</th>
         <th>Rolle</th>
         <th>Status</th>
+        <th>Aktionen</th>
       </tr>
     </thead>
 
@@ -32,6 +33,14 @@
           <td>{{ employee.department }}</td>
           <td>{{ employee.role }}</td>
           <td><app-status-badge [status]="employee.status" /></td>
+          <td>
+            <button
+              class="btn-danger"
+              (click)="deleteEmployee(employee.id, employee.firstName + ' ' + employee.lastName)"
+            >
+              Löschen
+            </button>
+          </td>
         </tr>
       } @empty {
         <tr>

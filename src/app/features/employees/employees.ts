@@ -31,4 +31,12 @@ export class Employees {
       );
     });
   });
+
+  deleteEmployee(id: number, name: string) {
+    const confirmed = confirm(`Möchtest du ${name} wirklich löschen?`);
+
+    if (confirmed) {
+      this.employeeService.deleteEmployee(id);
+    }
+  }
 }
